@@ -1,0 +1,81 @@
+.locale {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.locale-selected img {
+  max-width: 40px;
+}
+.locale-selected {
+  cursor: pointer;
+  position: relative;
+
+  width: 48px;
+  height: 42px;
+
+  background: #000;
+
+  padding-top: 4px;
+
+  text-align: center;
+
+  &::after {
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    position: absolute;
+
+    content: '';
+
+    margin: auto;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: rgba(#fff, 50%) transparent transparent transparent;
+  }
+}
+.locale-selected__show {
+  opacity: 0;
+}
+.locale-changer {
+  top: 0;
+  right: 0;
+  position: absolute;
+
+  background: rgba(#000, 70%);
+
+  padding: 7px 10px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  flex-direction: column;
+}
+.locale-changer-item {
+  cursor: pointer;
+
+  color: rgba(#fff, 50%);
+
+  white-space: nowrap;
+
+  margin-top: 10px;
+
+  transition: 0.3s linear;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+.locale-changer-item img {
+  max-width: 40px;
+}
+.locale-changer-item__active {
+  color: #fff;
+}

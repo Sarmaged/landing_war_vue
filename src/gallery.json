@@ -1,0 +1,25 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "type": "jpg",
+      "small": "1",
+      "big": "1-big",
+      "path": "assets/img/gallery/"
+    },
+    {
+      "id": 2,
+      "type": "jpg",
+      "small": "2",
+      "big": "2-big",
+      "path": "assets/img/gallery/"
+    },
+    {
+      "id": 3,
+      "type": "jpg",
+      "small": "3",
+      "big": "3-big",
+      "path": "assets/img/gallery/"
+    }
+  ]
+}

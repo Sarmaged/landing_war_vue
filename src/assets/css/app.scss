@@ -1,0 +1,220 @@
+@import 'var';
+@import 'native';
+@import 'fonts';
+
+body {
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: $c-text;
+  text-align: left;
+
+  overscroll-behavior-y: none;
+
+  background: $c-bg url('~@/assets/img/promo_art_xm1_gm_layers_s.jpg') 50% 0 no-repeat;
+  background-size: cover;
+
+  height: auto;
+  min-height: 100vh;
+
+  &::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+    content: '';
+
+    margin: auto;
+
+    background: url('~@/assets/img/tank_tower.png') 50% 0 no-repeat;
+    background-size: cover;
+
+    z-index: $z1;
+  }
+
+  @media #{$mobile}, #{$mobile-landscape} {
+    background-image: url('~@/assets/img/wt_18_lp_bg_mobile.jpg');
+    background-position: 50% 0;
+    background-size: auto;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @media #{$mobile-landscape} {
+    background-size: contain;
+  }
+}
+
+a {
+  color: $c-text;
+}
+
+.z1 {
+  position: relative;
+  z-index: $z1;
+}
+.z2 {
+  position: relative;
+  z-index: $z2;
+}
+.z3 {
+  position: relative;
+  z-index: $z3;
+}
+.z4 {
+  position: relative;
+  z-index: $z4;
+}
+.z10 {
+  position: relative;
+  z-index: $z10;
+}
+
+.isMobile {
+  display: none;
+  @media #{$mobile}, #{$mobile-landscape} {
+    display: block;
+  }
+}
+.isNotMobile {
+  display: block;
+  @media #{$mobile}, #{$mobile-landscape} {
+    display: none;
+  }
+}
+
+.logo-wt {
+  top: 50px;
+  left: 0;
+  right: 0;
+  position: absolute;
+
+  content: '';
+
+  color: transparent;
+
+  font-size: 0;
+  line-height: 0;
+
+  margin: auto;
+
+  width: 310px / $W * 100%;
+  height: 156px / $H * 100%;
+
+  background: url('~@/assets/img/-e-wt_logo_classic1.png') 50% no-repeat;
+  background-size: contain;
+
+  @media #{$mobile}, #{$mobile-landscape} {
+    position: static;
+    width: 140px;
+    height: 72px;
+
+    margin-top: 25px;
+  }
+}
+
+.glob-title {
+  top: 200px / $H * 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+
+  content: '';
+
+  margin: auto;
+
+  width: 1320px / $W * 100%;
+
+  text-align: center;
+
+  @media #{$mac} {
+    width: 1520px / $W * 100%;
+  }
+
+  @media #{$mobile}, #{$mobile-landscape} {
+    position: static;
+
+    margin-top: 28px;
+  }
+}
+.glob-title h1 {
+  color: transparent;
+
+  font-size: 0;
+  line-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  text-transform: uppercase;
+}
+
+@keyframes showTitleImage {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glob-title img {
+  width: 100%;
+  opacity: 0;
+  animation: showTitleImage 1s 0.7s ease-out 1 both;
+
+  @media #{$mobile}, #{$mobile-landscape} {
+    max-width: 320px;
+    margin: auto;
+  }
+}
+
+// main
+.main {
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  position: absolute;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media #{$mobile}, #{$mobile-landscape} {
+    position: static;
+
+    margin-top: 160px;
+  }
+}
+.main-title {
+  @include main-title;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+
+  @media #{$mobile}, #{$mobile-landscape} {
+    width: 80%;
+    text-align: center;
+  }
+}
+.main-title span {
+  color: $c-gold;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

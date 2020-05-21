@@ -1,0 +1,39 @@
+{
+  "iso": "en",
+
+  "langs": {
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "en": "English"
+  },
+
+  "gallery": {
+    "title": "Video & screenshots"
+  },
+
+  "main": {
+    "h1": "Starter pack for free",
+    "logo": "WAR THUNDER",
+    "title": "Choose your <span>free</span> bonus",
+    "block": {
+      "list": [
+        {
+          "type": "THACH’S",
+          "model": "F2A-1 Buffalo"
+        },
+        {
+          "type": "Light tank",
+          "model": "M2A4"
+        }
+      ],
+      "or": "or",
+      "description": "+ 3 day premium account"
+    },
+    "footer": {
+      "policy": "Privacy Policy",
+      "eula": "EULA",
+      "terms": "Terms of Use",
+      "support": "Customer Support"
+    }
+  }
+}

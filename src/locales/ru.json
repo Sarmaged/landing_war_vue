@@ -1,0 +1,39 @@
+{
+  "iso": "ru",
+
+  "langs": {
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "en": "English"
+  },
+
+  "gallery": {
+    "title": "Видео и скриншоты"
+  },
+
+  "main": {
+    "h1": "Стартовый пакет бесплатно",
+    "logo": "WAR THUNDER",
+    "title": "Выберите свой <span>бесплатный</span> бонус",
+    "block": {
+      "list": [
+        {
+          "type": "THACH’S",
+          "model": "F2A-1 Buffalo"
+        },
+        {
+          "type": "Легкий танк",
+          "model": "M2A4"
+        }
+      ],
+      "or": "или",
+      "description": "+ 3 дня премиум аккаунта"
+    },
+    "footer": {
+      "policy": "Конфиденциальность",
+      "eula": "EULA",
+      "terms": "Условия пользования",
+      "support": "Служба поддержки"
+    }
+  }
+}

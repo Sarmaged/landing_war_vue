@@ -1,0 +1,39 @@
+{
+  "iso": "tr",
+
+  "langs": {
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "en": "English"
+  },
+
+  "gallery": {
+    "title": "Video & Ekran Görüntüleri"
+  },
+
+  "main": {
+    "h1": "Ücretsiz başlangıç paketi",
+    "logo": "WAR THUNDER",
+    "title": "<span>Ücretsiz</span> bonusunuzu seçin",
+    "block": {
+      "list": [
+        {
+          "type": "THACH’S",
+          "model": "F2A-1 Buffalo"
+        },
+        {
+          "type": "Hafif tank",
+          "model": "M2A4"
+        }
+      ],
+      "or": "ya da",
+      "description": "+3 gün Premium hesap süresi"
+    },
+    "footer": {
+      "policy": "Gizlilik Politikası",
+      "eula": "EULA",
+      "terms": "Kullanım Şartları",
+      "support": "Müşteri desteği"
+    }
+  }
+}
