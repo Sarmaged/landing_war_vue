@@ -1,17 +1,17 @@
 <template>
   <div class="locale z3">
     <div :class="['locale-selected', { 'locale-selected__show': isShowLangList }]" @click="showLangList">
-      <img :src="src($i18n.locale)" alt="" />
+      <img :src="src(currentLocale)" :alt="currentLocale" />
     </div>
     <transition name="fade">
       <div class="locale-changer" v-if="isShowLangList">
         <div
-          :class="['locale-changer-item', { 'locale-changer-item__active': $i18n.locale === lang }]"
-          v-for="(lang, i) in langs"
-          :key="`Lang${i}`"
-          @click="setLocal(lang)"
+          :class="['locale-changer-item', { 'locale-changer-item__active': currentLocale === locale }]"
+          v-for="(locale, x) in langs"
+          :key="x"
+          @click="setLocal(locale)"
         >
-          <img :src="src(lang)" alt="" /> {{ $t(`langs.${lang}`) }}
+          <img :src="src(locale)" :alt="locale" /> {{ $t(`langs.${locale}`) }}
         </div>
       </div>
     </transition>
@@ -21,20 +21,24 @@
 <script>
 export default {
   data: () => ({
-    selected: 'ru',
-    isShowLangList: false,
-    langs: ['ru', 'tr']
+    langs: ['ru', 'tr'],
+    isShowLangList: false
   }),
+  computed: {
+    currentLocale() {
+      return this.$i18n.locale
+    }
+  },
   methods: {
     showLangList() {
       this.isShowLangList = true
     },
-    setLocal(lang) {
-      if (!lang) return
+    setLocal(locale) {
+      if (!locale) return
       this.isShowLangList = false
 
-      if (this.$i18n.locale === lang) return
-      this.$i18n.locale = lang
+      if (this.currentLocale === locale) return
+      this.$i18n.locale = locale
     },
     src(lang) {
       if (!lang) return

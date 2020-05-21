@@ -6,12 +6,12 @@
 
     <div class="glob-title z1">
       <h1>{{ $t('main.h1') }}</h1>
-      <img class="isNotMobile" :src="imgLoad('header_ru', $t('iso'))" alt="" />
+      <img class="isNotMobile" :src="imgLoad('header_ru')" :alt="$t('main.h1')" />
       <img
         class="isMobile"
-        :src="imgLoad('header_ru', $t('iso'))"
-        :srcset="`${imgLoad('header_ru_m', $t('iso'))} 1x, ${imgLoad('header_ru_m@2x', $t('iso'))} 2x`"
-        alt=""
+        :src="imgLoad('header_ru')"
+        :srcset="`${imgLoad('header_ru_m')} 1x, ${imgLoad('header_ru_m@2x')} 2x`"
+        :alt="`${$t('main.h1')} - mobile`"
       />
     </div>
 
@@ -45,6 +45,11 @@ export default {
     Choose,
     Locale
   },
+  computed: {
+    currentLocale() {
+      return this.$i18n.locale
+    }
+  },
   created() {
     const { images } = require('./gallery.json')
     this.galleryImages = images
@@ -53,8 +58,8 @@ export default {
     this.chooseItems = chooseItems1
   },
   methods: {
-    imgLoad(img, lang) {
-      const file = img.replace('_ru', `_${lang}`)
+    imgLoad(img) {
+      const file = img.replace('_ru', `_${this.currentLocale}`)
       return require(`@/assets/img/headers/${file}.png`)
     }
   }
